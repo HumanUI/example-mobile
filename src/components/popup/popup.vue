@@ -1,5 +1,5 @@
 <template>
-  <mn-popup :show="show" @close="close" animation="slideInDown">
+  <mn-popup :class="[ 'action-sheet' ]" :show="show" @close="close" animation="slideInDown">
     <mn-popup-card class="has-one-margin-bottom">
       <mn-card-item>
         <mn-card-body class="has-center-text">
@@ -31,3 +31,11 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .action-sheet {
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+  }
+</style>
