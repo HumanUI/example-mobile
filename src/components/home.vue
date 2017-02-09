@@ -1,7 +1,7 @@
 <template>
   <mn-rows>
     <mn-row>
-      <mn-scroller save>
+      <mn-scroller>
         <mn-section>
           <mn-letter>
             <mn-letter-body>
