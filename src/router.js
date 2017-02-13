@@ -69,6 +69,10 @@ const router = new VueRouter({
     {
       path: '/components/loading',
       component: resolve => { require(['./components/loading'], resolve) }
+    },
+    {
+      path: '/components/table',
+      component: resolve => { require(['./components/table'], resolve) }
     }
   ]
 })

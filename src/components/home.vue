@@ -124,6 +124,11 @@
                 title: 'slide-bar',
                 icon: require('vue-human-icons/js/ios/time-outline'),
                 route: { path: '/components/slide-bar' }
+              },
+              {
+                title: 'table',
+                icon: require('vue-human-icons/js/ios/time-outline'),
+                route: { path: '/components/table' }
               }
             ]
           }
