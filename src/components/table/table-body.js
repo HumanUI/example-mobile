@@ -33,8 +33,9 @@ export default {
             this.tableData.map((row, $index) => {
               return <tr>{
                 this.columns.map((cell, index) => {
+                  let store = this.store
                   return <td class={cell.fixed !== '' && this.fixed === '' ? 'is-hidden' : ''}>
-                    {cell.renderCell(h, {row, cell, $index})}
+                    {cell.renderCell(h, {row, cell, store, $index})}
                   </td>
                 })
               }</tr>
