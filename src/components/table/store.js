@@ -6,6 +6,7 @@ const TableStore = function (table, initialState = {}) {
   this.table = table
 
   this.states = {
+    selectList: [],
     rowKey: null,
     _columns: [],
     originColumns: [],
@@ -56,6 +57,13 @@ TableStore.prototype.mutations = {
     }
 
     this.scheduleLayout()
+  },
+  updataAllSelect (states, type) {
+    if (type === 'ALL') {
+      states.selectList = states.data.concat('ALL')
+    } else {
+      states.selectList = []
+    }
   }
 }
 TableStore.prototype.scheduleLayout = function () {

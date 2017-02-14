@@ -34,9 +34,12 @@ export default {
     fixed: {
       type: String,
       default: ''
+    },
+    type: {
+      type: String,
+      default: 'default'
     }
   },
-
   data () {
     return {
       columns: []
@@ -73,6 +76,17 @@ export default {
         renderCell = DEFAULT_RENDER_CELL
       }
       return <div class='cell'>{renderCell(h, data)}</div>
+    }
+
+    let renderHead = this.columns.renderHead
+
+    this.columns.renderHead = function (h, data) {
+      if (_self.$scopedSlots.default && !_self.label) {
+        renderHead = () => _self.$scopedSlots.default(data)
+      } else {
+        renderHead = () => _self.label
+      }
+      return <div class='cell'>{renderHead(h, data)}</div>
     }
   },
   mounted () {

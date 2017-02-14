@@ -11,6 +11,11 @@
     <mn-card>
       <mn-card-item>
         <demo-table :data="data">
+          <table-col prop="name" fixed="left" width="40px">
+            <template scope="scope">
+              <demo-check :scope="scope" @choose="check"></demo-check>
+            </template>
+          </table-col>
           <table-col prop="date" width="150px" label="时间" fixed="left"></table-col>
           <table-col prop="name" width="150px" label="人物"></table-col>
           <table-col prop="address" label="地点" width="300px"></table-col>
@@ -22,7 +27,7 @@
           <table-col prop="address" label="地点" width="300px"></table-col>
           <table-col label="操作" width="200px" fixed="right">
             <template scope="scope">
-             <mn-btn type="primary-outline" size="sm" @click="show(scope.$index, scope.row)">查看</mn-btn>
+              <mn-btn type="primary-outline" size="sm" @click="show(scope.$index, scope.row)">查看</mn-btn>
             </template>
           </table-col>
         </demo-table>
@@ -34,6 +39,7 @@
 <script>
   import DemoTable from './table.vue'
   import TableCol from './column.js'
+  import DemoCheck from './check.vue'
 
   export default {
     data () {
@@ -73,13 +79,17 @@
           city: '普陀区',
           address: '上海市普陀区金沙江路 1518 弄',
           zip: 200333
-        }]
+        }],
+        list: []
       }
     },
-    components: { DemoTable, TableCol },
+    components: { DemoTable, TableCol, DemoCheck },
     methods: {
       show (index, row) {
         console.log(index, row.date, row.name)
+      },
+      check (val) {
+        console.log(val)
       }
     }
   }
