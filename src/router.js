@@ -72,7 +72,7 @@ const router = new VueRouter({
     },
     {
       path: '/components/table',
-      component: resolve => { require(['./components/table'], resolve) }
+      component: resolve => { require(['./components/table/demo'], resolve) }
     }
   ]
 })
