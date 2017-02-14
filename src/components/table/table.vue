@@ -31,7 +31,7 @@
 </template>
 
 <script>
-  import TableHead from './table-head.vue'
+  import TableHead from './table-head.js'
   import TableBody from './table-body.js'
   import TableStore from './store.js'
   import lodash from 'lodash'
