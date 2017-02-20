@@ -58,11 +58,11 @@ TableStore.prototype.mutations = {
 
     this.scheduleLayout()
   },
-  updataAllSelect (states, type) {
-    if (type === 'ALL') {
-      states.selectList = states.data.concat('ALL')
+  updataAllSelect (states, list) {
+    if (list.length === states.data.length) {
+      states.selectList = list.concat('ALL')
     } else {
-      states.selectList = []
+      states.selectList = list
     }
   }
 }
