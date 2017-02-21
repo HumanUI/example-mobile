@@ -4,9 +4,9 @@ import App from './app'
 import './human'
 import './vuelidate'
 
-/* eslint-disable no-unused-vars */
-const app = new Vue({
+/* eslint-disable no-new */
+new Vue({
   el: 'app',
   router,
-  render: html => html(App)
+  render: h => h(App)
 })
