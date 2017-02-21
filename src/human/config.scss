@@ -1,0 +1,8 @@
+// config.scss
+// Must use sass-resource-loader@1.0.2 for webpack 1.x
+// $reboot-size-root: 14px;  // For example
+$grid-max-widths: (
+  sm: 940px,
+  md: 940px,
+  lg: 940px,
+);
