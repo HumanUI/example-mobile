@@ -4439,9 +4439,9 @@ vue-human-icons@^1.4.0:
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/vue-human-icons/download/vue-human-icons-1.4.0.tgz#e3fd023207474d0adc6898ddf55eb491b7839582"
 
-vue-human@^2.0.0-rc.6:
-  version "2.0.0-rc.6"
-  resolved "http://registry.npm.taobao.org/vue-human/download/vue-human-2.0.0-rc.6.tgz#2c922eac0589bce48a83705fe368c92f5d1bf6a3"
+vue-human@^2.0.0-rc.7:
+  version "2.0.0-rc.7"
+  resolved "https://registry.yarnpkg.com/vue-human/-/vue-human-2.0.0-rc.7.tgz#1a6540bd9394fff232440804bb2d9e31136e5236"
   dependencies:
     lodash "^4.17.3"
     node-sass "^4.1.1"
