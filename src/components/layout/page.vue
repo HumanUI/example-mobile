@@ -26,6 +26,7 @@
   import iosColorFilter from 'vue-human-icons/js/ios/color-filter'
 
   export default {
+    name: 'docs-layout-page',
     props: {
       title: {
         type: String,
