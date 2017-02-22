@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import VueHuman from 'vue-human'
-import components from 'vue-human/suits/total'
+import Human from 'vue-human'
+import totalSuits from 'vue-human/suits/total'
 import DocsLayoutPage from '../components/layout/page'
 import './app.scss'
 
-Vue.use(VueHuman)
+Vue.use(Human)
 
-VueHuman.add(components)
-VueHuman.add(DocsLayoutPage, 'docs-layout-page')
+Human.addComponent(DocsLayoutPage)
+Human.addSuits(totalSuits)
