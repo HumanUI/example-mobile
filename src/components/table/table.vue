@@ -2,9 +2,9 @@
   <div class="my-table">
     <div ref="hiddenColumns"><slot></slot></div>
     <div class="main">
-      <table-head :store="store" :style="{width: allWidth + 'px'}">
+      <table-head :store="store" :style="{width: allWidth}">
       </table-head>
-      <table-body :store="store" :style="{width: allWidth + 'px'}">
+      <table-body :store="store" :style="{width: allWidth}">
       </table-body>
     </div>
     <div class="leftTable" :style="{width: fixedWidth + 'px'}">
@@ -76,10 +76,15 @@
           this.rightFixedWidth = rightFixedWidth
         }
         let allWidth = 0
-        this.store.states._columns.forEach(column => {
-          allWidth += parseInt(column.width)
-        })
-        this.allWidth = allWidth
+        for (let i = 0, columns = this.store.states._columns; i < columns.length; i++) {
+          if (columns[i].width) {
+            allWidth += parseInt(columns[i].width)
+          } else {
+            allWidth = '100%'
+            break
+          }
+        }
+        this.allWidth = allWidth === '100%' ? allWidth : allWidth + 'px'
       }
     },
     computed: {
