@@ -26,7 +26,8 @@ module.exports = {
     alias: {
       'src': resolve('src'),
       'assets': resolve('src/assets'),
-      'components': resolve('src/components')
+      'components': resolve('src/components'),
+      'vue-human': resolve('vue-human')
     }
   },
   module: {
