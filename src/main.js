@@ -1,7 +1,6 @@
 /* !!Load router into the last */
 import Vue from 'vue'
 import './human'
-import './vuelidate'
 import App from './app'
 import router from './router'
 
